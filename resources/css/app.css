@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg-hero{
+    background-image: url("../../public/img/logo.jpg");
+    background-size: cover;
+    background-position: center; 
+}
