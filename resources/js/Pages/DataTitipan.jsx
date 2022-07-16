@@ -43,7 +43,7 @@ export default function DataTitipan(props) {
                             setEditttp(null);
                             setShowForm(true);
                         }} className="p-2  bg-yellow-500 rounded-lg border-2 item-end flex space-x-2 items-center hover:scale-105 transform transition-all duration-500">
-                            <GrIkon.GrNewWindow size={15} />
+                            <GrIkon.GrPrint size={15} />
                             <h1>Cetak</h1>
                         </button>
                         {/* <div className="flex items-center">

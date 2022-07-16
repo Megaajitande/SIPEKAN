@@ -17,10 +17,12 @@ export default function SidebarP({ menu }) {
             {showSidebar && (
                 <div className="sm:h-screen h-fit sm:p-0 p-4 sm:w-fit md:w-64 fixed sm:relative bottom-0 w-full overflow-hidden bg-indigo-900">
                     <div className="hidden md:flex sm:hidden justify-center items-center border-b-2 border-yellow-500 space-x-3">
-                        <img src="img/logo.jpg" className="w-9" alt="" />
+                        <div className="flex space-x-1">
+                            <img src="img/logo.jpg" className="w-7 " alt="" />
+                            <img src="img/log.jpg" className="w-9 " alt="" />
+                        </div>
                         <h1 className="py-6 font-extrabold font-logo tracking-wider text-2xl text-white  hidden md:block sm:hidden">
                             SIPEKAN
-
                         </h1>
                     </div>
                     {/* <div className="font-poppins text-white overflow-x-hidden overflow-y-auto space-y-2 px-2 mt-5 text-sm"> */}
@@ -29,7 +31,13 @@ export default function SidebarP({ menu }) {
                             href="/userdashboard"
                             className="w-auto sm:w-full flex justify-between items-center font-semibold space-x-2"
                         >
-                            <div className={`${menu == "Dashboard" ? "bg-yellow-600" : "bg-indigo-900 hover:bg-indigo-700 duration-200"} text-sm py-3 sm:px-11 px-6  w-2 sm:w-60 grid grid-cols-4 sm:gap-4 gap-0 place-items-center text-white rounded-xl`}>
+                            <div
+                                className={`${
+                                    menu == "Dashboard"
+                                        ? "bg-yellow-600"
+                                        : "bg-indigo-900 hover:bg-indigo-700 duration-200"
+                                } text-sm py-3 sm:px-11 px-6  w-2 sm:w-60 grid grid-cols-4 sm:gap-4 gap-0 place-items-center text-white rounded-xl`}
+                            >
                                 <div className="">
                                     <IconAi.AiOutlineHome size={25} />
                                 </div>
@@ -42,12 +50,18 @@ export default function SidebarP({ menu }) {
                             href="/antriansaya"
                             className="flex justify-between items-center font-semibold space-x-2"
                         >
-                            <div className={`${menu == "Antrian Saya" ? "bg-yellow-600 " : "bg-indigo-900 hover:bg-indigo-700 duration-200"} text-sm py-3 sm:px-11 px-6  w-2 sm:w-60 grid grid-cols-4 gap-4 place-items-center text-white rounded-xl`}>
+                            <div
+                                className={`${
+                                    menu == "Antrian Saya"
+                                        ? "bg-yellow-600 "
+                                        : "bg-indigo-900 hover:bg-indigo-700 duration-200"
+                                } text-sm py-3 sm:px-11 px-6  w-2 sm:w-60 grid grid-cols-4 gap-4 place-items-center text-white rounded-xl`}
+                            >
                                 <div className="">
                                     <IconFi.FiServer size={25} />
                                 </div>
                                 <div className="col-span-3 w-full hidden sm:hidden md:block">
-                                    <span className="">Antrian Saya</span>
+                                    <span className="">Jadwal Saya</span>
                                 </div>
                             </div>
                         </Link>
@@ -55,20 +69,34 @@ export default function SidebarP({ menu }) {
                             href="/informasikunjungan"
                             className="flex justify-between items-center font-semibold space-x-2"
                         >
-                            <div className={`${menu == "Informasi Kunjungan" ? "bg-yellow-600" : "bg-indigo-900 hover:bg-indigo-700 duration-200"} text-sm py-3 sm:px-11 px-6  w-2 sm:w-60 grid grid-cols-4 gap-4 place-items-center text-white rounded-xl`}>
+                            <div
+                                className={`${
+                                    menu == "Informasi Kunjungan"
+                                        ? "bg-yellow-600"
+                                        : "bg-indigo-900 hover:bg-indigo-700 duration-200"
+                                } text-sm py-3 sm:px-11 px-6  w-2 sm:w-60 grid grid-cols-4 gap-4 place-items-center text-white rounded-xl`}
+                            >
                                 <div className="">
                                     <IconRi.RiInformationLine size={25} />
                                 </div>
                                 <div className="col-span-3 w-full hidden sm:hidden md:block">
-                                    <span className="">Informasi Kunjungan</span>
+                                    <span className="">
+                                        Informasi Kunjungan
+                                    </span>
                                 </div>
                             </div>
                         </Link>
-                        <Link
+                        {/* <Link
                             href="/panduan"
                             className="flex justify-between items-center font-semibold space-x-2"
                         >
-                            <div className={`${menu == "Panduan" ? "bg-yellow-600" : "bg-indigo-900 hover:bg-indigo-700 duration-200"} text-sm py-3 sm:px-11 px-6  w-2 sm:w-60 grid grid-cols-4 gap-4 place-items-center text-white rounded-xl`}>
+                            <div
+                                className={`${
+                                    menu == "Panduan"
+                                        ? "bg-yellow-600"
+                                        : "bg-indigo-900 hover:bg-indigo-700 duration-200"
+                                } text-sm py-3 sm:px-11 px-6  w-2 sm:w-60 grid grid-cols-4 gap-4 place-items-center text-white rounded-xl`}
+                            >
                                 <div className="">
                                     <IconCg.CgNotes size={25} />
                                 </div>
@@ -76,12 +104,18 @@ export default function SidebarP({ menu }) {
                                     <span className="">Panduan</span>
                                 </div>
                             </div>
-                        </Link>
+                        </Link> */}
                         <Link
                             href="/kontakkami"
                             className="flex justify-between items-center font-semibold space-x-2"
                         >
-                            <div className={`${menu == "Kontak Kami" ? "bg-yellow-600" : "bg-indigo-900 hover:bg-indigo-700 duration-200"} text-sm py-3 sm:px-11 px-6  w-2 sm:w-60 grid grid-cols-4 gap-4 place-items-center text-white rounded-xl`}>
+                            <div
+                                className={`${
+                                    menu == "Kontak Kami"
+                                        ? "bg-yellow-600"
+                                        : "bg-indigo-900 hover:bg-indigo-700 duration-200"
+                                } text-sm py-3 sm:px-11 px-6  w-2 sm:w-60 grid grid-cols-4 gap-4 place-items-center text-white rounded-xl`}
+                            >
                                 <div className="">
                                     <IconMd.MdContactMail size={25} />
                                 </div>
@@ -94,12 +128,20 @@ export default function SidebarP({ menu }) {
                             href="/koderegistrasi"
                             className="flex justify-between items-center font-semibold space-x-2"
                         >
-                            <div className={`${menu == "Kode Registrasi" ? "bg-yellow-600" : "bg-indigo-900 hover:bg-indigo-700 duration-200"} text-sm py-3 sm:px-11 px-6  w-2 sm:w-60 grid grid-cols-4 gap-4 place-items-center text-white rounded-xl`}>
+                            <div
+                                className={`${
+                                    menu == "Kode Registrasi"
+                                        ? "bg-yellow-600"
+                                        : "bg-indigo-900 hover:bg-indigo-700 duration-200"
+                                } text-sm py-3 sm:px-11 px-6  w-2 sm:w-60 grid grid-cols-4 gap-4 place-items-center text-white rounded-xl`}
+                            >
                                 <div className="">
                                     <IconFa.FaCashRegister size={25} />
                                 </div>
                                 <div className="col-span-3 w-full hidden sm:hidden md:block">
-                                    <span className="">Registrasi Kunjungan</span>
+                                    <span className="">
+                                        Registrasi Kunjungan
+                                    </span>
                                 </div>
                             </div>
                         </Link>
@@ -107,7 +149,13 @@ export default function SidebarP({ menu }) {
                             href="/koderegisttp"
                             className="flex justify-between items-center font-semibold space-x-2"
                         >
-                            <div className={`${menu == "Kode Registrasi titipan" ? "bg-yellow-600" : "bg-indigo-900 hover:bg-indigo-700 duration-200"} text-sm py-3 sm:px-11 px-6  w-2 sm:w-60 grid grid-cols-4 gap-4 place-items-center text-white rounded-xl`}>
+                            <div
+                                className={`${
+                                    menu == "Kode Registrasi titipan"
+                                        ? "bg-yellow-600"
+                                        : "bg-indigo-900 hover:bg-indigo-700 duration-200"
+                                } text-sm py-3 sm:px-11 px-6  w-2 sm:w-60 grid grid-cols-4 gap-4 place-items-center text-white rounded-xl`}
+                            >
                                 <div className="">
                                     <IconFa.FaCashRegister size={25} />
                                 </div>
@@ -119,8 +167,6 @@ export default function SidebarP({ menu }) {
                     </div>
                 </div>
             )}
-
         </div>
     );
-
 }

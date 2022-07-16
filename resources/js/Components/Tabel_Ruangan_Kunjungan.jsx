@@ -12,7 +12,7 @@ import "gridjs/dist/theme/mermaid.css";
 export default function Tabel_Ruangan_Kunjungan() {
     const [editruangan, setEditruangan] = useRecoilState(editData);
     const [showForm, setShowForm] = useRecoilState(form);
-    const [lihatruangan, setlihatruangan] = useState(false);
+    // const [lihatruangan, setlihatruangan] = useState(false);
 
     const hapus = (id) => {
         let formData = new FormData;
@@ -42,16 +42,16 @@ export default function Tabel_Ruangan_Kunjungan() {
                             index + 1,
                             ruang_kunjungan.kode_ruangan,
                             ruang_kunjungan.nama_ruangan,
-                            _(
-                                <button onClick={() => {
-                                    setEditruangan(ruang_kunjungan);
-                                    setlihatruangan(true);
-                                }} className=" p-2 rounded-lg bg-green-100 hover:bg-green-200 transition duration-200">
-                                    <BiIkon.BiShowAlt size={16}
-                                        className="text-green-400"
-                                    />
-                                </button>
-                            ),
+                            // _(
+                            //     <button onClick={() => {
+                            //         setEditruangan(ruang_kunjungan);
+                            //         setlihatruangan(true);
+                            //     }} className=" p-2 rounded-lg bg-green-100 hover:bg-green-200 transition duration-200">
+                            //         <BiIkon.BiShowAlt size={16}
+                            //             className="text-green-400"
+                            //         />
+                            //     </button>
+                            // ),
                             _(
                                 <button onClick={() => {
                                     setEditruangan(ruang_kunjungan);
@@ -81,7 +81,7 @@ export default function Tabel_Ruangan_Kunjungan() {
                         "NAMA RUANGAN",
                         { name: "Aksi", width: "20px" },
                         { name: "", width: "20px" },
-                        { name: "", width: "20px" },
+                        // { name: "", width: "20px" },
                     ]}
                 search={true}
                 pagination={{

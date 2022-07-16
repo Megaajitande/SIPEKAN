@@ -7,6 +7,11 @@ use Illuminate\Http\Request;
 
 class DataWaktuController extends Controller
 {
+  // public function cari($cari)
+  // {
+  //   $waktu = waktu_kunjungan::where('kode_jam', 'LIKE', '%' . $cari . '%')->orwhere('mulai', 'LIKE', '%' . $cari . '%')->get();
+  //   return $waktu;
+  // }
     public function index()
   {
     return inertia('DataWaktuKnj', [

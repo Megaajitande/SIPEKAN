@@ -5,10 +5,11 @@ import { editData, form, lihatdata } from '../store';
 import * as GrIkon from "react-icons/gr"
 import axios from 'axios';
 import Tabel_Ruangan_Kunjungan from '../Components/Tabel_Ruangan_Kunjungan';
+import FormRuangKunjungan from '../Components/FormRuangKunjungan';
 
 export default function DataRuangan(props) {
   const [cari, setCari] = useState();
-  const [Ruangan, setruangan] = useState(props.ruangan.data);
+  const [ruangan, setruangan] = useState(props.ruangan.data);
   const pencarian = async () => {
       try {
           let response = await axios.get(`/cariruangankunjungan/${cari}`);
@@ -25,7 +26,7 @@ export default function DataRuangan(props) {
 
   return (
       <div className='relative min-h-screen flex items-center justify-center'>
-          {/* {showForm && <FormDataWBP showModal={showForm} setShowModal={setShowForm} />} */}
+          {showForm && <FormRuangKunjungan showModal={showForm} setShowModal={setShowForm} />}
 
           <div className="w-full h-full space-y-3">
               <div className="flex px-5 items-start space-x-2 justify-start w-full ">
@@ -37,7 +38,7 @@ export default function DataRuangan(props) {
                       <h1>Tambah Data</h1>
                   </button>
               </div>
-              <Tabel_Ruangan_Kunjungan ruangan_kunjungan={Ruangan} from={from} />
+              <Tabel_Ruangan_Kunjungan ruang_kunjungan={ruangan} from={from} />
           </div>
       </div>
   );

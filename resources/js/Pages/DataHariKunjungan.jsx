@@ -5,6 +5,7 @@ import { editData, form, lihatdata } from '../store';
 import * as GrIkon from "react-icons/gr"
 import axios from 'axios';
 import Tabel_Hari_Kunjungan from '../Components/Tabel_Hari_Kunjungan';
+import FormHariKunjungan from '../Components/FormHariKunjungan';
 
 export default function DataHariKunjungan(props) {
     const [cari, setCari] = useState();
@@ -25,7 +26,7 @@ export default function DataHariKunjungan(props) {
   
     return (
         <div className='relative min-h-screen flex items-center justify-center'>
-            {/* {showForm && <FormDataWBP showModal={showForm} setShowModal={setShowForm} />} */}
+            {showForm && <FormHariKunjungan showModal={showForm} setShowModal={setShowForm} />}
   
             <div className="w-full h-full space-y-3">
                 <div className="flex px-5 items-start space-x-2 justify-start w-full ">

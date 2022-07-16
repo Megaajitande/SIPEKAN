@@ -42,16 +42,16 @@ export default function Tabel_Hari_Kunjungan({hari_kunjungan}) {
                             index + 1,
                             hari_kunjungan.kode_hari,
                             hari_kunjungan.nama_hari    ,
-                            _(
-                                <button onClick={() => {
-                                    setEdithari(hari_kunjungan);
-                                    setlihathari(true);
-                                }} className=" p-2 rounded-lg bg-green-100 hover:bg-green-200 transition duration-200">
-                                    <BiIkon.BiShowAlt size={16}
-                                        className="text-green-400"
-                                    />
-                                </button>
-                            ),
+                            // _(
+                            //     <button onClick={() => {
+                            //         setEdithari(hari_kunjungan);
+                            //         setlihathari(true);
+                            //     }} className=" p-2 rounded-lg bg-green-100 hover:bg-green-200 transition duration-200">
+                            //         <BiIkon.BiShowAlt size={16}
+                            //             className="text-green-400"
+                            //         />
+                            //     </button>
+                            // ),
                             _(
                                 <button onClick={() => {
                                     setEdithari(hari_kunjungan);
@@ -66,7 +66,7 @@ export default function Tabel_Hari_Kunjungan({hari_kunjungan}) {
                             _(
                                 <button onClick={() => {
                                     hapus(hari_kunjungan.id)
-                                }} className="p-2 rounded-lg bg-red-100 hover:bg-red-200 transition duration-200">
+                                }} className=" p-2 rounded-lg bg-red-100 hover:bg-red-200 transition duration-200">
                                     <FaIkon.FaTrash size={16}
                                         className="text-red-400"
                                     />
@@ -81,7 +81,7 @@ export default function Tabel_Hari_Kunjungan({hari_kunjungan}) {
                         "NAMA HARI",
                         { name: "Aksi", width: "20px" },
                         { name: "", width: "20px" },
-                        { name: "", width: "20px" },
+                        // { name: "", width: "20px" },
                     ]}
                 search={true}
                 pagination={{

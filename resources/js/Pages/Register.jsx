@@ -30,8 +30,9 @@ export default function Register(props) {
     return (
         <div className="">
             <div className="h-screen  w-full flex justify-center items-center">
-                <div className="w-3/5 flex h-a1 overflow-hidden rounded-3xl">
-                    <div className="p-12 bg-indigo-900 w-3/5 shadow-xl md:flex hidden flex-col justify-center ">
+                <div className="w-1/4 flex h-a1 overflow-hidden rounded-3xl">
+                    
+                    {/* <div className="p-12 bg-indigo-900 w-3/5 shadow-xl md:flex hidden flex-col justify-center ">
                         <div className="mb-10">
                             <Link
                                 href="/"
@@ -52,16 +53,28 @@ export default function Register(props) {
                                 Selamat Datang Di Halaman Register SIPEKAN
                             </div>
                         </div>
-                    </div>
+                    </div> */}
 
-                    <div className="py-8 px-10 text-center flex flex-col flex-grow bg-white  shadow-xl justify-center items-center ">
+                    <div className="py-8 px-10 text-center flex flex-col flex-grow border-indigo-500 border-2  bg-indigo-800 bg-gradient-to-br shadow-xl justify-center items-center ">
+                    <div className="flex w-16 h-16 items-center justify-center">
+                        <img
+                            src="/img/logo.jpg"
+                            alt=""
+                            className="w-12"
+                        />
+                        <img
+                            src="/img/log.jpg"
+                            alt=""
+                            className=""
+                        />
+                    </div>
                         <form onSubmit={handleSubmit(daftarakun)}>
                             <div>
-                                <h1 className="text-3xl font-bold text-center mb-4 text-blue-500">
+                                <h1 className="text-3xl font-bold text-center mb-4 text-White">
                                     Register Page
                                 </h1>
                             </div>
-                            <div className="space-y-4 w-full">
+                            <div className="space-y-2 w-full">
                                 <input
                                     type="text"
                                     placeholder="Masukkan Nama Lengkap Anda"
@@ -160,7 +173,7 @@ export default function Register(props) {
                                         *Konfirmasi Password
                                     </span>
                                 )}
-                                <input type="file"
+                                <input className='text-white' type="file"
                                     onChange={(e) => {
                                         setfoto(e.target.files);
                                     }}
@@ -180,7 +193,7 @@ export default function Register(props) {
                             <div className="text-center mt-6 w-full">
                                 <button
                                     type='submit'
-                                    className="w-full py-2 text-xl shadow-sm text-indigo-900 border-2 hover:text-white hover:bg-green-400 rounded-lg font-semibold focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-30"
+                                    className="w-full py-2 text-xl shadow-sm text-white border-2 hover:text-white hover:bg-blue-400 rounded-lg font-semibold focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-30"
                                 >
                                     Daftar
                                 </button>

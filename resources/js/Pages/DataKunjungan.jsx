@@ -5,7 +5,7 @@ import { editData, form, lihatdata } from '../store';
 import * as GrIkon from "react-icons/gr"
 import FormDataKunjungan from '../Components/user/FormDataKunjungan';
 import axios from 'axios';
-import LihatDataKunjungan from '../Components/LihatDataKunjungan';
+// import LihatDataKunjungan from '../Components/LihatDataKunjungan';
 import TableDataKunjungan2 from '../Components/TableDataKunjungan2';
 
 export default function DataKunjungan(props) {
@@ -38,7 +38,7 @@ export default function DataKunjungan(props) {
                             setEditknj(null);
                             setShowForm(true);
                         }} className="p-2  bg-yellow-500 rounded-lg border-2 item-end flex space-x-2 items-center  hover:scale-105 transform transition-all duration-500 ">
-                            <GrIkon.GrNewWindow size={15} />
+                            <GrIkon.GrPrint size={15} />
                             <h1>Cetak</h1>
                         </button>
                         {/* <div className="flex items-center">
@@ -74,7 +74,6 @@ export default function DataKunjungan(props) {
                 </div>
 
                 <TableDataKunjungan2 dataknj={knj} from={from} />
-                {/* <Pagination links={links} /> */}
             </div>
         </div>
     )

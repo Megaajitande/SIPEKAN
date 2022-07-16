@@ -8,7 +8,8 @@ export default function Navbar() {
         <div>
             <div className="w-full h-fit items-center bg-white shadow-lg px-10 py-5 flex flex-col sm:flex-row justify-between top-0">
                 <div className="px-8">
-                    <a href="/" className="flex items-center space-x-4">
+                    <a href="/" className="flex items-center space-x-2">
+                    <img src="img/logo.jpg" className="w-9" alt="" />
                         <img src="img/log.jpg" className="w-12" alt="" />
                         <div className="flex flex-col">
                             <h1 className="text-xl font-bold text-gray-700">KEMENTRIAN HUKUM DAN HAM RI</h1>

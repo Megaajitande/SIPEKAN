@@ -31,6 +31,7 @@ class CreateDataKunjungansTable extends Migration
             $table->string('waktu_tglknj')->nullable();
             $table->string('kode_kunjungan')->nullable();
             $table->string('Status')->nullable();
+            $table->date('tanggaldaftar');
             $table->timestamps();
         });
     }

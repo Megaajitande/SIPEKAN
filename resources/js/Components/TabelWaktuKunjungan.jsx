@@ -43,16 +43,16 @@ export default function Tabelwaktukunjungan({ waktu_kunjungan }) {
                             waktu_kunjungan.kode_jam,
                             waktu_kunjungan.mulai,
                             waktu_kunjungan.selesai,
-                            _(
-                                <button onClick={() => {
-                                    setEditwaktu(waktu_kunjungan);
-                                    setlihatwaktu(true);
-                                }} className=" p-2 rounded-lg bg-green-100 hover:bg-green-200 transition duration-200">
-                                    <BiIkon.BiShowAlt size={16}
-                                        className="text-green-400"
-                                    />
-                                </button>
-                            ),
+                            // _(
+                            //     <button onClick={() => {
+                            //         setEditwaktu(waktu_kunjungan);
+                            //         setlihatwaktu(true);
+                            //     }} className=" p-2 rounded-lg bg-green-100 hover:bg-green-200 transition duration-200">
+                            //         <BiIkon.BiShowAlt size={16}
+                            //             className="text-green-400"
+                            //         />
+                            //     </button>
+                            // ),
                             _(
                                 <button onClick={() => {
                                     setEditwaktu(waktu_kunjungan);
@@ -82,7 +82,7 @@ export default function Tabelwaktukunjungan({ waktu_kunjungan }) {
                         "SELESAI",
                         { name: "Aksi", width: "20px" },
                         { name: "", width: "20px" },
-                        { name: "", width: "20px" },
+                        // { name: "", width: "20px" },
                     ]}
                 search={true}
                 pagination={{

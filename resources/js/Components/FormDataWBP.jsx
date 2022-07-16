@@ -73,7 +73,8 @@ export default function FormDataWBP({ showModal, setShowModal }) {
                     <h1 className='text-xl font-bold text-center text-gray-800'> Tambah Data WBP</h1>
                 </div>
 
-                <form onSubmit={handleSubmit(insertData)} className="grid grid-cols-2 gap-5">
+                <form onSubmit={handleSubmit(insertData)} className="">
+                    <div className="grid grid-cols-2 gap-5">
                     <div className="space-y-5">
 
                         <div className="flex flex-col items-start">
@@ -261,20 +262,13 @@ export default function FormDataWBP({ showModal, setShowModal }) {
                                 value={keterangan}
                             />
                         </div>
-
+                        </div> 
                     </div>
-                    <div className="flex items-center justify-center w-full bg-red-400">
+                    <div className="p-6 flex items-center justify-center w-ful">
                         <button type='submit' className=' bg-blue-500 text-white font-bold p-3 rounded-md'>Simpan</button>
-                        {/* <button onClick={() => {
-                            setShowForm(false)
-                        }} className='bg-red-500 text-white font-bold p-3 rounded-md'>Tutup</button> */}
-
                     </div>
 
                 </form>
-                {/* <div className="flex items-center justify-center py-8">
-                    <div className="text-black ">Copyright &copy; Sistem Pendaftaran Kunjungan 2022</div>
-                </div> */}
             </div>
         </ModalRoot>
     )

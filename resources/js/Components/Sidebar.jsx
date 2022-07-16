@@ -18,7 +18,10 @@ export default function Sidebar({ menu }) {
             {showSidebar && (
                 <div className="sm:h-screen h-fit sm:p-0 p-4 sm:w-fit md:w-64 fixed sm:relative bottom-0 w-full overflow-hidden bg-indigo-900 ">
                     <div className="flex justify-center items-center  border-b-2 border-yellow-500 space-x-3 ">
+                        <div className="flex space-x-1">
+                    <img src="img/logo.jpg" className="w-7 " alt="" />
                         <img src="img/log.jpg" className="w-9 " alt="" />
+                        </div>
                         <h1 className="py-6 font-extrabold font-logo tracking-wider text-2xl text-white">
                             SIPEKAN
 
@@ -83,7 +86,7 @@ export default function Sidebar({ menu }) {
                             href="/ruangan"
                             className="flex justify-between items-center font-semibold space-x-2"
                         >
-                              <div className={`${menu == "Data Pengunjung" ? "bg-yellow-600" : "bg-indigo-900 hover:bg-indigo-700 duration-200"} text-sm py-2 px-11 w-64 grid grid-cols-4 gap-4 place-items-center text-white rounded-xl`}>
+                              <div className={`${menu == "Data Ruangan Kunjungan" ? "bg-yellow-600" : "bg-indigo-900 hover:bg-indigo-700 duration-200"} text-sm py-2 px-11 w-64 grid grid-cols-4 gap-4 place-items-center text-white rounded-xl`}>
                                 <div className="col-span-1">
                                     <IconSi.SiGoogleclassroom size={25} />
                                 </div>
@@ -96,7 +99,7 @@ export default function Sidebar({ menu }) {
                             href="/hari"
                             className="flex justify-between items-center font-semibold space-x-2"
                         >
-                              <div className={`${menu == "Data Pengunjung" ? "bg-yellow-600" : "bg-indigo-900 hover:bg-indigo-700 duration-200"} text-sm py-2 px-11 w-64 grid grid-cols-4 gap-4 place-items-center text-white rounded-xl`}>
+                              <div className={`${menu == "Data Hari Kunjungan" ? "bg-yellow-600" : "bg-indigo-900 hover:bg-indigo-700 duration-200"} text-sm py-2 px-11 w-64 grid grid-cols-4 gap-4 place-items-center text-white rounded-xl`}>
                                 <div className="col-span-1">
                                     <IconMd.MdToday size={25} />
                                 </div>
@@ -109,7 +112,7 @@ export default function Sidebar({ menu }) {
                             href="/waktu"
                             className="flex justify-between items-center font-semibold space-x-2"
                         >
-                              <div className={`${menu == "Data Pengunjung" ? "bg-yellow-600" : "bg-indigo-900 hover:bg-indigo-700 duration-200"} text-sm py-2 px-11 w-64 grid grid-cols-4 gap-4 place-items-center text-white rounded-xl`}>
+                              <div className={`${menu == "Data Waktu Kunjungan" ? "bg-yellow-600" : "bg-indigo-900 hover:bg-indigo-700 duration-200"} text-sm py-2 px-11 w-64 grid grid-cols-4 gap-4 place-items-center text-white rounded-xl`}>
                                 <div className="col-span-1">
                                     <IconMd.MdAccessTime size={25} />
                                 </div>
@@ -122,7 +125,7 @@ export default function Sidebar({ menu }) {
                             href="/datapengunjung"
                             className="flex justify-between items-center font-semibold space-x-2"
                         >
-                            <div className={`${menu == "Data Pengunjung" ? "bg-yellow-600" : "bg-indigo-900 hover:bg-indigo-700 duration-200"} text-sm py-2 px-11 w-64 grid grid-cols-4 gap-4 place-items-center text-white rounded-xl`}>
+                            <div className={`${menu == "Data Pengguna" ? "bg-yellow-600" : "bg-indigo-900 hover:bg-indigo-700 duration-200"} text-sm py-2 px-11 w-64 grid grid-cols-4 gap-4 place-items-center text-white rounded-xl`}>
                                 <div className="col-span-1">
                                     <IconFa.FaUserCog size={25} />
                                 </div>

@@ -5,8 +5,12 @@ import * as HiIkon from "react-icons/hi"
 import toast, { Toaster } from 'react-hot-toast';
 import { useForm } from 'react-hook-form';
 import { Inertia } from '@inertiajs/inertia';
+import { form } from '../store';
+import { useRecoilState } from 'recoil';
+import FormLupaPassword from '../Components/FormLupaPassword';
 
 export default function Login(props) {
+    const [showForm, setShowForm] = useRecoilState(form);
     const { flash } = usePage().props;
     flash.type && toast[flash.type](flash.message);
     const {
@@ -24,8 +28,9 @@ export default function Login(props) {
     return (
         <div className="h-screen  w-full flex justify-center items-center">
             <Toaster />
-            <div className="w-2/3 flex h-a1 overflow-hidden rounded-3xl">
-                <div className="p-12 bg-indigo-900 w-3/5 shadow-xl md:flex hidden flex-col justify-center ">
+            {showForm && <FormLupaPassword showModal={showForm} setShowModal={setShowForm} />}
+            <div className="w-1/4 flex h-a1 overflow-hidden rounded-3xl ">
+                {/* <div className="p-12 bg-indigo-900 w-3/5 shadow-xl md:flex hidden flex-col justify-center ">
                     <div className="mb-10">
                         <Link
                             href="/"
@@ -46,10 +51,15 @@ export default function Login(props) {
                             Selamat Datang Di Halaman Login SIPEKAN
                         </div>
                     </div>
-                </div>
+                </div> */}
 
-                <div className="py-8 px-10 text-center flex flex-col flex-grow bg-white  shadow-xl justify-center items-center ">
+                <div className="py-8 px-10 text-center flex flex-col flex-grow  border-indigo-500 border-2  bg-indigo-700 bg-linier-gradient-to-br shadow-xl justify-center items-center">
                     <div className="flex w-16 h-16 items-center justify-center">
+                    <img
+                            src="/img/logo.jpg"
+                            alt=""
+                            className="w-12"
+                        />
                         <img
                             src="/img/log.jpg"
                             alt=""
@@ -57,11 +67,11 @@ export default function Login(props) {
                         />
                     </div>
                     <div>
-                        <h1 className="text-3xl font-bold text-center mb-4 text-indigo-900">
+                        <h1 className="text-2xl font-bold text-center mb-4 text-white">
                             Halaman Login
                         </h1>
                     </div>
-                    <form action="" onSubmit={handleSubmit(cekLogin)}>
+                    <form action="" onSubmit={handleSubmit(cekLogin)} className="py-8">
                         <div className="space-y-4 w-full">
                             <input
                                 {...register("username", {
@@ -95,7 +105,7 @@ export default function Login(props) {
                         <div className="text-center mt-6 w-full">
                             <button
                                 type="submit"
-                                className="w-full py-2 text-xl shadow-sm text-indigo-700 border-2 hover:text-white hover:bg-green-400 rounded-lg font-semibold focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-30"
+                                className="w-full py-2 text-xl shadow-sm text-white border-2 hover:text-white hover:bg-blue-400 rounded-lg font-semibold focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-30"
                             >
                                 Masuk
                             </button>
@@ -104,7 +114,7 @@ export default function Login(props) {
                                     {props.errors.failed}
                                 </span>
                             )}
-                            <p className="mt-4 text-sm">
+                            <p className="mt-4 text-sm text-white">
                                 Belum Punya Akun?{" "}
                                 <Link
                                     href="/register"
@@ -113,18 +123,16 @@ export default function Login(props) {
                                     Buat Akun
                                 </Link>
                             </p>
-                            <p className="mt-4 text-sm">
-                                Lupa Password{" "}
-                                <Link
-                                    href="/register"
-                                    className="underline hover:text--400 cursor-pointer"
+                            <a className="mt-4 text-sm text-white" href='#Lupa_Password' onClick={() =>{
+                                    setShowForm(true);
+                            }}
                                 >
-                                    Buat Akun
-                                </Link>
-                            </p>
-                        </div>
+                                    Lupa Password
+                                </a>
+                            </div> 
                     </form>
                 </div>
+                
             </div>
         </div>
     )

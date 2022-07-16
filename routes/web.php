@@ -28,6 +28,9 @@ use App\Http\Controllers\User\RegisterController as UserRegisterController;
 use App\Http\Controllers\User\UserDashboardController;
 use App\Http\Controllers\User\UserPendaftarankunjunganController;
 use App\Models\User;
+use Inertia\Inertia;
+use Laravel\Fortify\Http\Controllers\NewPasswordController;
+use Laravel\Fortify\Http\Controllers\PasswordResetLinkController;
 use Psy\TabCompletion\Matcher\FunctionsMatcher;
 use Spatie\Permission\Models\Role;
 
@@ -49,6 +52,24 @@ Route::post('/login', [LoginController::class, 'ceklogin']);
 
 Route::get('/register', [UserRegisterController::class, 'index']);
 Route::post('/register', [UserRegisterController::class, 'daftarakun']);
+Route::get('/lupapassword', function () {
+    return Inertia::render('LupaPassword');
+});
+Route::get('/riwayat', function () {
+    return Inertia::render('Riwayat');
+});
+
+Route::post('/forgot-password', [PasswordResetLinkController::class, 'store'])
+->middleware('guest')
+->name('password.request');
+Route::get('/reset_password/{token}', [NewPasswordController::class, 'create'])
+->middleware('guest')
+->name('password.reset');
+Route::post('/password-update', [NewPasswordController::class, 'store'])
+->middleware('guest')
+->name('password.update');
+
+
 
 // admin
 Route::middleware('auth')->group(function () {
@@ -69,8 +90,11 @@ Route::middleware('auth')->group(function () {
 
         Route::get('/datatitipan', [DataTitipanController::class, 'index']);
         Route::get('/waktu', [DataWaktuController::class, 'index']);
+        Route::post('/insertwaktu', [DataWaktuController::class, 'insert']);
         Route::get('/hari', [HariKunjunganController::class, 'index']);
+        Route::post('/insertharikunjungan', [HariKunjunganController::class, 'insert']);
         Route::get('/ruangan', [DataRuanganController::class, 'index']);
+        Route::post('/insertruangan', [DataRuanganController::class, 'insert']);
 
 
         Route::get('/registrasikunjungan', [RegistrasiKunjunganController::class, 'index']);

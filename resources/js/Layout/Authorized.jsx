@@ -11,7 +11,7 @@ export default function Authorized({ children, title }) {
     flash.type && toast[flash.type](flash.message);
     return (
         <RecoilRoot>
-            <div className="flex h-screen font-poppins bg-indigo-900">
+           <div className="flex h-screen font-poppins bg-indigo-900">
                 <Toaster />
                 <Head title={title} />
                 <Sidebar menu={title} />

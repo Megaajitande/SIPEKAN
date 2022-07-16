@@ -20,13 +20,13 @@ export default function FormWaktuKunjungan({ showModal, setShowModal }) {
         waktu['selesai'] = selesai;
         
         if (editwaktu) {
-            Inertia.post("/editwaktu", data, {
+            Inertia.post("/editwaktu", waktu, {
                 onSuccess: () => {
                     setShowModal(false);
                 }
             });
         } else {
-            Inertia.post("/insertwaktu", data, {
+            Inertia.post("/insertwaktu", waktu, {
                 onSuccess: () => {
                     setShowModal(false);
                 }
@@ -49,11 +49,11 @@ export default function FormWaktuKunjungan({ showModal, setShowModal }) {
                     <h1 className='text-xl font-bold text-center text-gray-800'> Tambah Data Jam</h1>
                 </div>
 
-                <form onSubmit={handleSubmit(insertData)} className="space-y-5 flex flex-col items-center justify-center h-full w-full">
-                    <div className="space-y-5 flex flex-col items-center justify-center h-full w-full">
+                <form onSubmit={handleSubmit(insertData)} className="space-y-3 flex flex-col items-center justify-center h-full w-full">
+                    <div className="space-y-3 flex flex-col items-center justify-center h-full w-full">
 
-                        <div className="flex flex-col items-start">
-                            <label htmlFor="data_ruangan">Kode Jam</label>
+                        <div className="flex w-full items-center justify-center">
+                            <label className='flex w-full items-center justify-center-bold text-lg' htmlFor="waktu_kunjungan">Kode Jam</label>
                             <input type="text" className="mt-1 block w-full py-2 px-3 border border-black-300 
                       bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                                 onChange={(e) => {
@@ -62,9 +62,8 @@ export default function FormWaktuKunjungan({ showModal, setShowModal }) {
                                 value={kode_jam}
                             />
                         </div>
-                        <div className="bg-green-500"></div>
-                        <div className="flex flex-col items-start">
-                            <label htmlFor="data_ruangan">Mulai</label>
+                        <div className="flex w-full items-center justify-center">
+                            <label className='flex w-full items-center justify-center-bold text-lg' htmlFor="waktu_kunjungan">Mulai</label>
                             <input type="text" className="mt-1 block w-full py-2 px-3 border border-black-300 
                       bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                                 onChange={(e) => {
@@ -73,8 +72,8 @@ export default function FormWaktuKunjungan({ showModal, setShowModal }) {
                                 value={mulai}
                             />
                         </div>
-                        <div className="flex flex-col items-start">
-                            <label htmlFor="data_ruangan">Selesai</label>
+                        <div className="flex w-full items-center justify-center">
+                            <label className='flex w-full items-center justify-center-bold text-lg' htmlFor="waktu_kunjungan">Selesai</label>
                             <input type="text" className="mt-1 block w-full py-2 px-3 border border-black-300 
                       bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                                 onChange={(e) => {
@@ -83,11 +82,12 @@ export default function FormWaktuKunjungan({ showModal, setShowModal }) {
                                 value={selesai}
                             />
                         </div>
+                        </div>
                        
-                    <div className="flex items-center justify-center w-full bg-white-400">
+                    <div className="p-5 flex items-center justify-center w-full bg-white-400">
                         <button type='submit' className=' bg-blue-500 text-white font-bold p-3 rounded-md'>Tambah</button>
                     </div>
-                    </div>
+                   
                 </form>
                 </div>
         </ModalRoot>

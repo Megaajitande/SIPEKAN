@@ -1,15 +1,16 @@
 import { Link } from '@inertiajs/inertia-react';
-import React from 'react'
+import React, { useState } from 'react'
 import AuthorizedP from '../../Layout/AuthorizedP';
-import * as IconAi from "react-icons/ai";
-import * as IconFi from "react-icons/fi";
-import * as IconRi from "react-icons/Ri";
-import * as IconCg from "react-icons/cg";
-import * as IconMd from "react-icons/md";
-import * as IconFa from "react-icons/fa";
+import Riwayat from '../../Components/user/Riwayat';
+import { form } from '../../store';
+import { useRecoilState } from 'recoil';
 
 
-export default function User_Dashboard() {
+export default function User_Dashboard(props) {
+    // const [rwyt] = useState(props.rwyt.data);
+    // const links = props.rwyt.links;
+    // const from = props.rwyt.from;
+    // const [showForm, setShowForm] = useRecoilState(form);
     return (
 
         <div className=" w-full h-full p-5 space-x-5 flex flex-col justify-center items-center ">
@@ -81,7 +82,7 @@ export default function User_Dashboard() {
                 </Link>
             </div> */}
             <div className="w-full h-full p-5 space-x-5 flex  justify-center items-center">
-                <Link href="/pendaftarankunjungan" className="bg-white px-3 sm:px-5 py-5 sm:py-10 rounded-xl shadow-xl border-2 border-gray-300 hover:scale-105 transform transition-all duration-500">
+                <Link href="/pendaftarankunjungan" className="bg-white px-3  py-5  sm:px-5 sm:py-10 rounded-xl shadow-xl border-2 border-gray-300 hover:scale-105 transform transition-all duration-500">
                     <h1 className="py-6 font-extrabold font-logo tracking-wider text-xl text-center sm:text-2xl text-blue-900">
                         PENDAFTARAN KUNJUNGAN
 
@@ -92,6 +93,9 @@ export default function User_Dashboard() {
                     </h1>
                 </Link>
             </div>
+          
+                {/* <Riwayat riwayat={rwyt} from={from} /> */}
+                
         </div>
     );
 }
